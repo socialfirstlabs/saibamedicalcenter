@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saiba Medical Centre (P) Ltd. | Trusted Medical Care in Pulchowk</title>
+    <title>Saiba Medical Centre (P) Ltd. | Trusted Medical Care in Pulchowk, Lalitpur</title>
     <meta name="description" content="Reliable medical care, diagnostics, and GAMCA exams in Pulchowk, Lalitpur. Book your appointment today.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -117,13 +117,16 @@
                 <a href="tel:+97715555221" class="block w-full text-center mt-4 bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-semibold">
                     📞 Call: +977-1-5555221
                 </a>
+                <a href="#contact" class="block px-3 py-2 text-base text-center bg-medical-600 text-white px-4 py-3 rounded-lg font-semibold shadow-md">
+                    Book Appointment
+                </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-36 pb-12 md:pt-34 md:pb-14 bg-gradient-to-br from-white to-medical-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="pt-36 pb-12 md:pt-34 md:pb-14 bg-gradient-to-br from-white to-medical-50 min-h-[86vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div class="space-y-8 text-center lg:text-left">
                     <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-medical-700 text-sm font-semibold mb-2">
@@ -146,10 +149,10 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-                        <a href="#contact" class="bg-action-500 hover:bg-action-600 text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                        <a href="#contact" class="bg-action-500 hover:bg-action-600 text-white text-lg px-6 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 w-full sm:w-auto text-center">
                             🟢 Book an Appointment
                         </a>
-                        <a href="tel:+97715555221" class="bg-white border-2 border-medical-100 hover:border-medical-200 text-gray-700 hover:text-medical-700 text-lg px-8 py-4 rounded-lg font-bold shadow-sm hover:shadow-md transition w-full sm:w-auto text-center">
+                        <a href="tel:+97715555221" class="bg-white border-2 border-medical-100 hover:border-medical-200 text-gray-700 hover:text-medical-700 text-lg px-6 py-4 rounded-lg font-bold shadow-sm hover:shadow-md transition w-full sm:w-auto text-center">
                             📞 Call Now: 01-5555221
                         </a>
                     </div>
@@ -552,24 +555,29 @@
                     <form id="booking-form" class="space-y-4">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition" placeholder="Ishwor Shrestha">
+                            <input type="text" id="name" name="name" required autocomplete="name" aria-describedby="name-error" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition" placeholder="Ishwor Shrestha">
+                            <p id="name-error" class="mt-1 hidden text-sm text-red-600"></p>
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition" placeholder="ishwor@example.com">
+                            <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition" placeholder="ishwor@example.com">
+                            <p id="email-error" class="mt-1 hidden text-sm text-red-600"></p>
                         </div>
                         <div>
                             <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition" placeholder="98XXXXXXXX">
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" aria-describedby="phone-error" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition" placeholder="98XXXXXXXX">
+                            <p id="phone-error" class="mt-1 hidden text-sm text-red-600"></p>
                         </div>
                         <div>
                             <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Select Service</label>
-                            <select id="service" name="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition bg-white">
+                            <select id="service" name="service" required aria-describedby="service-error" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition bg-white">
+                                <option value="" disabled selected>Select Option</option>
                                 <option value="Consultation">General Consultation</option>
                                 <option value="Diagnostic">Diagnostic Tests</option>
                                 <option value="Checkup">Health Check-Up</option>
                                 <option value="GAMCA">GAMCA / Overseas Exam</option>
                             </select>
+                            <p id="service-error" class="mt-1 hidden text-sm text-red-600"></p>
                         </div>
                         <div class="pt-2">
                             <button type="submit" id="submit-btn" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-200">
@@ -608,20 +616,58 @@
 
     <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
+        // Mobile Menu Logic
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+        const iconContainer = btn.querySelector('svg');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+        // SVG Paths
+        const hamburgerPath = "M4 6h16M4 12h16M4 18h16";
+        const closePath = "M6 18L18 6M6 6l12 12";
+
+        function toggleMenu() {
+            const isHidden = menu.classList.contains('hidden');
+            
+            if (isHidden) {
+                // Open Menu
+                menu.classList.remove('hidden');
+                iconContainer.querySelector('path').setAttribute('d', closePath);
+            } else {
+                // Close Menu
+                menu.classList.add('hidden');
+                iconContainer.querySelector('path').setAttribute('d', hamburgerPath);
+            }
+        }
+
+        function closeMenu() {
+            if (!menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                iconContainer.querySelector('path').setAttribute('d', hamburgerPath);
+            }
+        }
+
+        // Toggle on click
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent document click from firing immediately
+            toggleMenu();
         });
         
-        // Close mobile menu on link click
+        // Close on link click
         menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+            link.addEventListener('click', closeMenu);
         });
+
+        // Close on click outside (Condition 2)
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close on scroll (Condition 2 part b)
+        window.addEventListener('scroll', () => {
+            closeMenu();
+        }, { passive: true }); // passive improves scroll performance
 
         // FAQ Accordion Logic
         const accordions = document.querySelectorAll('.faq-btn');
@@ -658,9 +704,127 @@
         // Form Handling Logic with EmailJS
         const bookingForm = document.getElementById('booking-form');
         const submitBtn = document.getElementById('submit-btn');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const serviceSelect = document.getElementById('service');
+
+        function setFieldError(fieldEl, errorEl, message) {
+            if (!fieldEl || !errorEl) return;
+            if (message) {
+                errorEl.textContent = message;
+                errorEl.classList.remove('hidden');
+                fieldEl.classList.remove('border-gray-300');
+                fieldEl.classList.add('border-red-500');
+                fieldEl.setAttribute('aria-invalid', 'true');
+            } else {
+                errorEl.textContent = '';
+                errorEl.classList.add('hidden');
+                fieldEl.classList.remove('border-red-500');
+                fieldEl.classList.add('border-gray-300');
+                fieldEl.removeAttribute('aria-invalid');
+            }
+        }
+
+        function isValidEmail(value) {
+            // Pragmatic email check (HTML5 will also validate type="email")
+            return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(value);
+        }
+
+        function normalizePhone(value) {
+            return value.replace(/[^\d+]/g, '');
+        }
+
+        function isValidPhone(value) {
+            // Exactly 10 digits (ignores spaces/dashes; no + prefix)
+            const normalized = normalizePhone(value);
+            if (normalized.startsWith('+')) return false;
+            const digits = normalized.replace(/\D/g, '');
+            return digits.length === 10 && digits.startsWith('9');
+        }
+
+        function validateField(field) {
+            const nameErr = document.getElementById('name-error');
+            const emailErr = document.getElementById('email-error');
+            const phoneErr = document.getElementById('phone-error');
+            const serviceErr = document.getElementById('service-error');
+
+            if (field === 'name') {
+                const nameVal = (nameInput?.value || '').trim();
+                if (!nameVal) return setFieldError(nameInput, nameErr, 'Please enter your full name.'), false;
+                if (nameVal.length < 2) return setFieldError(nameInput, nameErr, 'Name must be at least 2 characters.'), false;
+                setFieldError(nameInput, nameErr, '');
+                return true;
+            }
+
+            if (field === 'email') {
+                const emailVal = (emailInput?.value || '').trim();
+                if (!emailVal) return setFieldError(emailInput, emailErr, 'Please enter your email address.'), false;
+                if (!isValidEmail(emailVal)) return setFieldError(emailInput, emailErr, 'Please enter a valid email address.'), false;
+                setFieldError(emailInput, emailErr, '');
+                return true;
+            }
+
+            if (field === 'phone') {
+                const phoneVal = (phoneInput?.value || '').trim();
+                if (!phoneVal) return setFieldError(phoneInput, phoneErr, 'Please enter your phone number.'), false;
+                if (!isValidPhone(phoneVal)) return setFieldError(phoneInput, phoneErr, 'Please enter a valid 10-digit phone number.'), false;
+                setFieldError(phoneInput, phoneErr, '');
+                return true;
+            }
+
+            if (field === 'service') {
+                const serviceVal = (serviceSelect?.value || '').trim();
+                if (!serviceVal) return setFieldError(serviceSelect, serviceErr, 'Please select a service.'), false;
+                setFieldError(serviceSelect, serviceErr, '');
+                return true;
+            }
+
+            return true;
+        }
+
+        function validateForm({ focusFirstInvalid = false } = {}) {
+            const order = [
+                { key: 'name', el: nameInput },
+                { key: 'email', el: emailInput },
+                { key: 'phone', el: phoneInput },
+                { key: 'service', el: serviceSelect }
+            ];
+
+            const invalid = order.filter(({ key }) => !validateField(key));
+
+            if (focusFirstInvalid && invalid.length > 0) {
+                invalid[0].el?.focus();
+            }
+
+            return invalid.length === 0;
+        }
+
+        // Live validation (only validate the field being edited)
+        if (nameInput) {
+            nameInput.addEventListener('input', () => validateField('name'));
+            nameInput.addEventListener('blur', () => validateField('name'));
+        }
+        if (emailInput) {
+            emailInput.addEventListener('input', () => validateField('email'));
+            emailInput.addEventListener('blur', () => validateField('email'));
+        }
+        if (phoneInput) {
+            phoneInput.addEventListener('input', () => validateField('phone'));
+            phoneInput.addEventListener('blur', () => validateField('phone'));
+        }
+        if (serviceSelect) {
+            serviceSelect.addEventListener('change', () => validateField('service'));
+            serviceSelect.addEventListener('blur', () => validateField('service'));
+        }
 
         bookingForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            // Validate before sending
+            if (!validateForm({ focusFirstInvalid: true })) {
+                return;
+            }
             
             // Visual feedback: Sending state
             submitBtn.disabled = true;
